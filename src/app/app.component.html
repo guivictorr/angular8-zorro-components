@@ -12,11 +12,11 @@
         <td>{{ data.nome }}</td>
         <td>{{ data.sobrenome }}</td>
         <td>{{ data.idade }}</td>
-        <td bnShowExpand [(bnExpand)]="data.expand">Mostrar mais</td>
+        <td bnShowExpand [(bnExpand)]="data.expand"></td>
       </tr>
       <tr [bnExpand]="data.expand">
         <td></td>
-        <td colspan="7">
+        <td colspan="3">
           <bn-table>
             <thead>
               <tr>

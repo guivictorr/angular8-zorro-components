@@ -1,27 +1,35 @@
-# Angular8NestedTable
+<h1 align='center'>Angular Nested Table</h1>
+<p align='center'>I Created this repository just for develop a table component with extra options like nested tables and sorting using angular</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.29.
+## 🛠 Technologies
 
-## Development server
+This project was developed with the following technologies:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Frontend
 
-## Code scaffolding
+- [Angular 8](https://angular.io/)
+- [Ant Design](https://ng-zorro.gitee.io/docs/introduce/en)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 📱💻 Instructions
 
-## Build
+```
+## 1. Clone repo
+git clone https://github.com/guivictorr/angular8-nested-table.git
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## 2. Change to project folder
+cd angular8-nested-table
 
-## Running unit tests
+## 3. Install dependencies
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 4. Run the app
+npm run start
+```
 
-## Running end-to-end tests
+## 🤔 How to contribute
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+- Fork this repository;
+- Create a branch with your feature: `git checkout -b my-feature`;
+- Commit your changes: `git commit -m 'feat: My new feature'`;
+- Push to your branch: `git push origin my-feature`.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Once your pull request has been merged, you can delete your branch.
