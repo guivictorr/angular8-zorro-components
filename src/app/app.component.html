@@ -1,8 +1,8 @@
 <bn-table #tableComponent [bnData]="data">
   <thead (bnSortChange)="sort($event)">
     <tr>
-      <th bnShowSort bnSortKey="name">Nome</th>
-      <th>Sobrenome</th>
+      <th bnShowSort bnSortKey="name" bnSort="ascend">Nome</th>
+      <th bnShowSort bnSortKey="name">Sobrenome</th>
       <th>Idade</th>
       <th>Família</th>
     </tr>
@@ -16,7 +16,6 @@
         <td bnShowExpand [(bnExpand)]="data.expand">3</td>
       </tr>
       <tr [bnExpand]="data.expand">
-        <td></td>
         <td colspan="4">
           <bn-table>
             <thead>
