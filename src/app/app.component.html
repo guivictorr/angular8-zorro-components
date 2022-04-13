@@ -1,5 +1,5 @@
 <bn-table #tableComponent [bnData]="data">
-  <thead>
+  <thead (bnSortChange)="sort($event)">
     <tr>
       <th bnShowSort bnSortKey="name">Nome</th>
       <th>Sobrenome</th>
