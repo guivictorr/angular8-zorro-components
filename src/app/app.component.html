@@ -1,9 +1,10 @@
 <bn-table #tableComponent [bnData]="data">
   <thead>
     <tr>
-      <th>Nome</th>
+      <th bnShowSort bnSortKey="name">Nome</th>
       <th>Sobrenome</th>
       <th>Idade</th>
+      <th>Família</th>
     </tr>
   </thead>
   <tbody>
@@ -12,11 +13,11 @@
         <td>{{ data.nome }}</td>
         <td>{{ data.sobrenome }}</td>
         <td>{{ data.idade }}</td>
-        <td bnShowExpand [(bnExpand)]="data.expand"></td>
+        <td bnShowExpand [(bnExpand)]="data.expand">3</td>
       </tr>
       <tr [bnExpand]="data.expand">
         <td></td>
-        <td colspan="3">
+        <td colspan="4">
           <bn-table>
             <thead>
               <tr>

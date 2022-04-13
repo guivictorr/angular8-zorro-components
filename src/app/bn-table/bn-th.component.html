@@ -1,0 +1,9 @@
+<div>
+  <ng-content></ng-content>
+  <div *ngIf="bnShowSort">
+    <div (click)="updateSortValue()">
+      <i nz-icon nzType="caret-up"></i>
+      <i nz-icon nzType="caret-down"></i>
+    </div>
+  </div>
+</div>

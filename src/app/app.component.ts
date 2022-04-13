@@ -15,4 +15,8 @@ export class AppComponent {
       expand: false,
     },
   ];
+
+  sort(event: Event) {
+    console.log(event);
+  }
 }
