@@ -3,6 +3,7 @@
 @neutral-60: #a9adbc;
 @neutral-40: #d4d6dd;
 @neutral-20: #eeeff2;
+@primary-300: #06439d;
 @primary-100: #0858ce;
 @primary-60: #5396f8;
 @primary-20: #b5d2fc;
@@ -56,6 +57,34 @@
   }
 
   td {
+    padding: 14px 24px;
+    color: @neutral-80;
+
+    .@{components-prefix}-showmore {
+      width: 24px;
+      height: 24px;
+      appearance: none;
+      border: 1px solid;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 0.5rem;
+      cursor: pointer;
+      color: @primary-100;
+      border-color: @primary-60;
+      background-color: transparent;
+    }
+
+    .showmore-on {
+      border-color: @primary-100;
+      color: @primary-300;
+      background-color: @primary-20;
+
+      svg {
+        transform: rotate(180deg);
+      }
+    }
   }
 
   tbody {
