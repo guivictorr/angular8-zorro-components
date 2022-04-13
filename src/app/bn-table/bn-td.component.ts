@@ -12,7 +12,6 @@ export class BnTdComponent {
 
   public expandChange(event: Event) {
     event.stopPropagation();
-    console.log("foi");
     this.bnExpand = !this.bnExpand;
     this.bnExpandChange.emit(this.bnExpand);
   }
