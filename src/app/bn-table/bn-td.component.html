@@ -1,0 +1,8 @@
+<ng-content></ng-content>
+<button (click)="expandChange($event)" *ngIf="bnShowExpand">
+  <i
+    nz-icon
+    [nzType]="bnExpand ? 'caret-up' : 'caret-down'"
+    nzTheme="outline"
+  ></i>
+</button>
