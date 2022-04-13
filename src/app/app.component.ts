@@ -7,9 +7,12 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
   title = "angular8-nested-table";
-  bnExpand = false;
-
-  public expandChange(event: Event) {
-    console.log(event);
-  }
+  data = [
+    {
+      nome: "Jorge",
+      sobrenome: "Paulo",
+      idade: "30",
+      expand: false,
+    },
+  ];
 }

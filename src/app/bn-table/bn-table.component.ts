@@ -1,9 +1,9 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input } from "@angular/core";
 
 @Component({
-  selector: 'bn-table',
-  templateUrl: 'bn-table.component.html',
+  selector: "bn-table",
+  templateUrl: "bn-table.component.html",
 })
 export class BnTableComponent<T = any> {
-  @Input() data?: T[];
+  @Input() bnData?: T[];
 }

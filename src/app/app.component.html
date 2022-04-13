@@ -1,21 +1,40 @@
-<bn-table>
+<bn-table #tableComponent [bnData]="data">
   <thead>
     <tr>
-      <th>name</th>
-      <th>name</th>
-      <th>name</th>
+      <th>Nome</th>
+      <th>Sobrenome</th>
+      <th>Idade</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td bnShowExpand [(bnExpand)]="bnExpand">jorge</td>
-      <td>jorge</td>
-      <td>jorge</td>
-    </tr>
-    <tr [bnExpand]="bnExpand">
-      <td>jorge</td>
-      <td>jorge</td>
-      <td>jorge</td>
-    </tr>
+    <ng-template ngFor let-data [ngForOf]="tableComponent.bnData">
+      <tr>
+        <td>{{ data.nome }}</td>
+        <td>{{ data.sobrenome }}</td>
+        <td>{{ data.idade }}</td>
+        <td bnShowExpand [(bnExpand)]="data.expand">Mostrar mais</td>
+      </tr>
+      <tr [bnExpand]="data.expand">
+        <td></td>
+        <td colspan="7">
+          <bn-table>
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Idade</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{ data.nome }}</td>
+                <td>{{ data.sobrenome }}</td>
+                <td>{{ data.idade }}</td>
+              </tr>
+            </tbody>
+          </bn-table>
+        </td>
+      </tr>
+    </ng-template>
   </tbody>
 </bn-table>
