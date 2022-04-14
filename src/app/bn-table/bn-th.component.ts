@@ -11,10 +11,14 @@ import { Subject } from "rxjs";
 @Component({
   selector: "th",
   templateUrl: "bn-th.component.html",
+  host: {
+    "[class.table-sort-on]": "bnSort !== null",
+  },
 })
 export class BnThComponent implements OnDestroy {
   private destroy$ = new Subject();
 
+  @Input() bnAlign: "center" | "end" | "start";
   @Input() bnSortKey: string;
   @Input() bnSort: "ascend" | "descend" | null = null;
   @Input() @InputBoolean() bnShowSort = false;

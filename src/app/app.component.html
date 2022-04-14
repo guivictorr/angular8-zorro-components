@@ -2,8 +2,10 @@
   <thead (bnSortChange)="sort($event)">
     <tr>
       <th bnShowSort bnSortKey="name" bnSort="ascend">Estado</th>
-      <th bnShowSort bnSortKey="lastname">Quantidade de problemas</th>
-      <th>CLientes afetados</th>
+      <th bnShowSort bnSortKey="lastname" bnAlign="center">
+        Quantidade de problemas
+      </th>
+      <th bnAlign="center">Clientes afetados</th>
       <th>Cidades</th>
     </tr>
   </thead>
@@ -11,8 +13,8 @@
     <ng-template ngFor let-data [ngForOf]="tableComponent.bnData">
       <tr>
         <td>{{ data.estado }}</td>
-        <td>{{ data.quantidade_problemas }}</td>
-        <td>{{ data.clientes_afetados }}</td>
+        <td bnAlign="center">{{ data.quantidade_problemas }}</td>
+        <td bnAlign="center">{{ data.clientes_afetados }}</td>
         <td [bnShowExpand]="data.children" [(bnExpand)]="data.expand">
           {{ data.cidades }}
         </td>
