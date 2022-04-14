@@ -8,6 +8,7 @@ import { BnTdComponent } from "./bn-td.component";
 import { BnTrDirective } from "./bn-tr.directive";
 import { BnThComponent } from "./bn-th.component";
 import { BnTheadComponent } from "./bn-thead.component";
+import { BnTrComponent } from "./bn-tr.component";
 
 @NgModule({
   imports: [CommonModule, FormsModule, NzIconModule],
@@ -17,6 +18,7 @@ import { BnTheadComponent } from "./bn-thead.component";
     BnTrDirective,
     BnThComponent,
     BnTheadComponent,
+    BnTrComponent,
   ],
   declarations: [
     BnTableComponent,
@@ -24,6 +26,7 @@ import { BnTheadComponent } from "./bn-thead.component";
     BnTrDirective,
     BnThComponent,
     BnTheadComponent,
+    BnTrComponent,
   ],
   providers: [],
 })

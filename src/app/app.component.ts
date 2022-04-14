@@ -7,57 +7,17 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
   title = "angular8-nested-table";
-  data = [
-    {
-      nome: "Jorge",
-      sobrenome: "Paulo",
-      idade: "30",
-      expand: true,
-      children: Array.from({ length: 5 }, () => ({
-        nome: "Jorge",
-        sobrenome: "Paulo",
-        idade: "30",
-      })),
-    },
-    {
-      nome: "Jorge",
-      sobrenome: "Paulo",
-      idade: "30",
-      expand: false,
-    },
-    {
-      nome: "Jorge",
-      sobrenome: "Paulo",
-      idade: "30",
-    },
-    {
-      nome: "Jorge",
-      sobrenome: "Paulo",
-      idade: "30",
-    },
-    {
-      nome: "Jorge",
-      sobrenome: "Paulo",
-      idade: "30",
-    },
-    {
-      nome: "Jorge",
-      sobrenome: "Paulo",
-      idade: "30",
-    },
-    {
-      nome: "Jorge",
-      sobrenome: "Paulo",
-      idade: "30",
-      children: [
-        {
-          nome: "Maria",
-          sobrenome: "Antonia",
-          idade: "42",
-        },
-      ],
-    },
-  ];
+  data = Array.from({ length: 26 }, (_, i) => ({
+    estado: `Estado ${i + 1}`,
+    quantidade_problemas: Math.floor(Math.random() * 1000),
+    clientes_afetados: Math.floor(Math.random() * 1000),
+    cidades: Math.floor(Math.random() * 1000),
+    children: Array.from({ length: 5 }, (_, j) => ({
+      cidade: `Cidade ${i + 1}`,
+      quantidade_problemas: Math.floor(Math.random() * 1000),
+      clientes_afetados: Math.floor(Math.random() * 1000),
+    })),
+  }));
 
   sort(event: Event) {
     console.log(event);
