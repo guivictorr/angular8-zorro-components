@@ -13,13 +13,11 @@ export class AppComponent {
       sobrenome: "Paulo",
       idade: "30",
       expand: true,
-      children: [
-        {
-          nome: "Maria",
-          sobrenome: "Antonia",
-          idade: "42",
-        },
-      ],
+      children: Array.from({ length: 5 }, () => ({
+        nome: "Jorge",
+        sobrenome: "Paulo",
+        idade: "30",
+      })),
     },
     {
       nome: "Jorge",
