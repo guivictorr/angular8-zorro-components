@@ -6,8 +6,16 @@ export class BnTrDirective {
   @Input() set bnExpand(value: boolean) {
     if (toBoolean(value)) {
       this.renderer.removeStyle(this.elementRef.nativeElement, "display");
+      this.renderer.addClass(
+        this.elementRef.nativeElement,
+        "bn-components-expanded-row"
+      );
     } else {
       this.renderer.setStyle(this.elementRef.nativeElement, "display", "none");
+      this.renderer.removeClass(
+        this.elementRef.nativeElement,
+        "bn-components-expanded-row"
+      );
     }
   }
 

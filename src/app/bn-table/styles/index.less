@@ -3,6 +3,7 @@
 @neutral-60: #a9adbc;
 @neutral-40: #d4d6dd;
 @neutral-20: #eeeff2;
+@neutral-10: #f5f4f6;
 @primary-300: #06439d;
 @primary-100: #0858ce;
 @primary-60: #5396f8;
@@ -39,17 +40,17 @@
       margin-left: 0.5rem;
       color: @neutral-60;
     }
-  }
 
-  .@{components-prefix}-th {
-    padding: 12px 24px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
+    .@{components-prefix}-th {
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
 
-    &:hover {
-      color: @primary-60;
+      &:hover {
+        color: @primary-60;
+      }
     }
   }
 
@@ -59,6 +60,11 @@
   td {
     padding: 14px 24px;
     color: @neutral-80;
+
+    &.@{components-prefix}-is-expanded {
+      color: @primary-60;
+      font-weight: bold;
+    }
 
     .@{components-prefix}-showmore {
       width: 24px;

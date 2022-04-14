@@ -4,6 +4,9 @@ import { InputBoolean } from "ng-zorro-antd";
 @Component({
   selector: "td",
   templateUrl: "bn-td.component.html",
+  host: {
+    "[class.bn-components-is-expanded]": "bnExpand",
+  },
 })
 export class BnTdComponent {
   @Input() @InputBoolean() bnExpand = false;

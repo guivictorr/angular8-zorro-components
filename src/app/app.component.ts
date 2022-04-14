@@ -12,13 +12,12 @@ export class AppComponent {
       nome: "Jorge",
       sobrenome: "Paulo",
       idade: "30",
-      expand: false,
+      expand: true,
       children: [
         {
           nome: "Maria",
           sobrenome: "Antonia",
           idade: "42",
-          expand: true,
         },
       ],
     },
@@ -32,7 +31,33 @@ export class AppComponent {
       nome: "Jorge",
       sobrenome: "Paulo",
       idade: "30",
-      expand: false,
+    },
+    {
+      nome: "Jorge",
+      sobrenome: "Paulo",
+      idade: "30",
+    },
+    {
+      nome: "Jorge",
+      sobrenome: "Paulo",
+      idade: "30",
+    },
+    {
+      nome: "Jorge",
+      sobrenome: "Paulo",
+      idade: "30",
+    },
+    {
+      nome: "Jorge",
+      sobrenome: "Paulo",
+      idade: "30",
+      children: [
+        {
+          nome: "Maria",
+          sobrenome: "Antonia",
+          idade: "42",
+        },
+      ],
     },
   ];
 
