@@ -41,7 +41,7 @@
       color: @neutral-60;
     }
 
-    .@{components-prefix}-th {
+    .@{components-prefix}-th-wrapper {
       padding: 12px 24px;
       display: flex;
       align-items: center;
@@ -52,9 +52,6 @@
         color: @primary-60;
       }
     }
-  }
-
-  tr {
   }
 
   td {
@@ -79,7 +76,7 @@
       background-color: transparent;
     }
 
-    .showmore-on {
+    .@{components-prefix}-showmore-on {
       border-color: @primary-100;
       color: @primary-300;
       background-color: @primary-20;
@@ -88,13 +85,18 @@
         transform: rotate(180deg);
       }
     }
+  }
 
+  tbody {
+    tr:not([ng-reflect-bn-expand]):nth-child(even) {
+      background-color: @neutral-10;
+    }
+  }
+
+  .@{components-prefix}-expanded-row {
     table {
       outline: 1px solid @neutral-40;
       border-radius: 8px;
     }
-  }
-
-  tbody {
   }
 }

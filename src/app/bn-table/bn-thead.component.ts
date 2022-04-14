@@ -1,5 +1,6 @@
 import {
   AfterViewInit,
+  ChangeDetectorRef,
   Component,
   ContentChildren,
   EventEmitter,
@@ -29,13 +30,17 @@ export class BnTheadComponent implements OnDestroy, AfterViewInit {
         startWith(true),
         switchMap(() =>
           merge<{ key: string; value: string }>(
-            ...this.listOfBnThComponent.map((th) => th.bnSortChangeWithKey)
+            ...this.listOfBnThComponent.map((th) => th.bnSortChange)
           )
         ),
         takeUntil(this.destroy$)
       )
       .subscribe((data) => {
         this.bnSortChange.emit(data);
+
+        this.listOfBnThComponent.forEach((th) => {
+          th.bnSort = th.bnSortKey === data.key ? th.bnSort : null;
+        });
       });
   }
 

@@ -18,7 +18,7 @@ export class BnThComponent implements OnDestroy {
   @Input() bnSortKey: string;
   @Input() bnSort: "ascend" | "descend" | null = null;
   @Input() @InputBoolean() bnShowSort = false;
-  @Output() bnSortChangeWithKey = new EventEmitter<{
+  @Output() bnSortChange = new EventEmitter<{
     key: string;
     value: string;
   }>();
@@ -39,7 +39,7 @@ export class BnThComponent implements OnDestroy {
 
   public setSortValue(value: "ascend" | "descend" | null) {
     this.bnSort = value;
-    this.bnSortChangeWithKey.emit({
+    this.bnSortChange.emit({
       key: this.bnSortKey,
       value: this.bnSort,
     });

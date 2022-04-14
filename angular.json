@@ -34,7 +34,6 @@
             ],
             "styles": [
               "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
-              "src/app/bn-table/styles/index.less",
               "src/styles.less"
             ],
             "scripts": []
@@ -98,7 +97,6 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
-              "src/app/bn-table/styles/index.less",
               "src/styles.less"
             ],
             "scripts": []
