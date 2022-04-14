@@ -13,9 +13,9 @@
         <td>{{ data.nome }}</td>
         <td>{{ data.sobrenome }}</td>
         <td>{{ data.idade }}</td>
-        <td bnShowExpand [(bnExpand)]="data.expand">3</td>
+        <td [bnShowExpand]="data.children" [(bnExpand)]="data.expand">3</td>
       </tr>
-      <tr [bnExpand]="data.expand">
+      <tr [bnExpand]="data.expand" *ngFor="let child of data.children">
         <td colspan="4">
           <bn-table>
             <thead>
@@ -27,9 +27,9 @@
             </thead>
             <tbody>
               <tr>
-                <td>{{ data.nome }}</td>
-                <td>{{ data.sobrenome }}</td>
-                <td>{{ data.idade }}</td>
+                <td>{{ child.nome }}</td>
+                <td>{{ child.sobrenome }}</td>
+                <td>{{ child.idade }}</td>
               </tr>
             </tbody>
           </bn-table>
