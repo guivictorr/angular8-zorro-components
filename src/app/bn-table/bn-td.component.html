@@ -1,20 +1,22 @@
-<ng-content></ng-content>
-<button
-  class="bn-components-showmore"
-  [class.bn-components-showmore-on]="bnExpand"
-  (click)="expandChange($event)"
-  *ngIf="bnShowExpand"
->
-  <svg
-    width="8"
-    height="9"
-    viewBox="0 0 8 4"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
+<div [style.width]="bnShowExpand && '80px'">
+  <ng-content></ng-content>
+  <button
+    class="bn-components-showmore"
+    [class.bn-components-showmore-on]="bnExpand"
+    (click)="expandChange($event)"
+    *ngIf="bnShowExpand"
   >
-    <path
-      d="M0.861949 1.13807L3.52862 3.80474C3.78896 4.06509 4.21107 4.06509 4.47142 3.80474L7.13809 1.13807C7.39844 0.877722 7.39844 0.455612 7.13809 0.195263C6.87774 -0.0650869 6.45563 -0.0650869 6.19528 0.195263L4.00002 2.39052L1.80476 0.195262C1.54441 -0.0650874 1.1223 -0.0650874 0.861949 0.195262C0.6016 0.455611 0.6016 0.877721 0.861949 1.13807Z"
-      fill="currentColor"
-    />
-  </svg>
-</button>
+    <svg
+      width="8"
+      height="12"
+      viewBox="0 0 8 4"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0.861949 1.13807L3.52862 3.80474C3.78896 4.06509 4.21107 4.06509 4.47142 3.80474L7.13809 1.13807C7.39844 0.877722 7.39844 0.455612 7.13809 0.195263C6.87774 -0.0650869 6.45563 -0.0650869 6.19528 0.195263L4.00002 2.39052L1.80476 0.195262C1.54441 -0.0650874 1.1223 -0.0650874 0.861949 0.195262C0.6016 0.455611 0.6016 0.877721 0.861949 1.13807Z"
+        fill="currentColor"
+      />
+    </svg>
+  </button>
+</div>
