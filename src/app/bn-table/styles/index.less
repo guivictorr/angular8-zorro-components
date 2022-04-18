@@ -57,9 +57,17 @@ bn-table {
   }
 
   thead {
-    border-bottom: 1px solid @neutral-40;
     color: @neutral-100;
     font-size: 1rem;
+
+    &::after {
+      height: 1px;
+      width: 100%;
+      background-color: @neutral-40;
+      content: "";
+      position: absolute;
+      bottom: 0;
+    }
 
     .@{components-prefix}-carets {
       display: flex;

@@ -15,6 +15,15 @@ import { BnThComponent } from "./bn-th.component";
 @Component({
   selector: "thead",
   templateUrl: "bn-thead.component.html",
+  styles: [
+    `
+      :host {
+        position: sticky;
+        top: 0;
+        background: white;
+      }
+    `,
+  ],
 })
 export class BnTheadComponent implements OnDestroy, AfterViewInit {
   private destroy$ = new Subject<void>();
