@@ -12,7 +12,7 @@ export class AppComponent {
     quantidade_problemas: Math.floor(Math.random() * 1000),
     clientes_afetados: Math.floor(Math.random() * 1000),
     cidades: Math.floor(Math.random() * 1000),
-    children: Array.from({ length: 5 }, (_, j) => ({
+    children: Array.from({ length: 15 }, (_, j) => ({
       cidade: `Cidade ${i + 1}`,
       quantidade_problemas: Math.floor(Math.random() * 1000),
       clientes_afetados: Math.floor(Math.random() * 1000),

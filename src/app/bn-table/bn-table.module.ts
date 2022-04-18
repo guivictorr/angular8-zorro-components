@@ -5,7 +5,6 @@ import { NzIconModule } from "ng-zorro-antd";
 
 import { BnTableComponent } from "./bn-table.component";
 import { BnTdComponent } from "./bn-td.component";
-import { BnTrDirective } from "./bn-tr.directive";
 import { BnThComponent } from "./bn-th.component";
 import { BnTheadComponent } from "./bn-thead.component";
 import { BnTrComponent } from "./bn-tr.component";
@@ -15,7 +14,6 @@ import { BnTrComponent } from "./bn-tr.component";
   exports: [
     BnTableComponent,
     BnTdComponent,
-    BnTrDirective,
     BnThComponent,
     BnTheadComponent,
     BnTrComponent,
@@ -23,7 +21,6 @@ import { BnTrComponent } from "./bn-tr.component";
   declarations: [
     BnTableComponent,
     BnTdComponent,
-    BnTrDirective,
     BnThComponent,
     BnTheadComponent,
     BnTrComponent,

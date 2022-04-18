@@ -6,7 +6,7 @@ import { NZ_I18N, en_US } from "ng-zorro-antd";
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { registerLocaleData } from "@angular/common";
+import { CommonModule, registerLocaleData } from "@angular/common";
 import en from "@angular/common/locales/en";
 import { BnTableModule } from "./bn-table/bn-table.module";
 
@@ -16,6 +16,7 @@ registerLocaleData(en);
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    CommonModule,
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,

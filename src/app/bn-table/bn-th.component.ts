@@ -18,7 +18,7 @@ import { Subject } from "rxjs";
 export class BnThComponent implements OnDestroy {
   private destroy$ = new Subject();
 
-  @Input() bnAlign: "center" | "end" | "start";
+  @Input() bnJustify: "center" | "end" | "start";
   @Input() bnSortKey: string;
   @Input() bnSort: "ascend" | "descend" | null = null;
   @Input() @InputBoolean() bnShowSort = false;

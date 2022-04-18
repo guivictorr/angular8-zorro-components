@@ -7,10 +7,15 @@ import { Component, Input } from "@angular/core";
     `
       :host {
         display: block;
+        overflow-y: auto;
       }
     `,
   ],
+  host: {
+    "[style.height]": "bnHeight",
+  },
 })
 export class BnTableComponent<T = any> {
   @Input() bnData?: T[];
+  @Input() bnHeight?: string;
 }

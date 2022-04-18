@@ -16,9 +16,37 @@
 
 @components-prefix: ~"bn-components";
 
+bn-table {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: @neutral-60;
+    border-radius: 18px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: @neutral-80;
+  }
+}
+
 .@{components-prefix}-table {
   background-color: #fff;
   width: 100%;
+
+  td bn-table {
+    border: 1px solid @neutral-40;
+    border-radius: 8px;
+  }
 
   .table-sort-on {
     color: @primary-60;
@@ -31,6 +59,7 @@
   thead {
     border-bottom: 1px solid @neutral-40;
     color: @neutral-100;
+    font-size: 1rem;
 
     .@{components-prefix}-carets {
       display: flex;
@@ -87,9 +116,19 @@
     }
   }
 
+  tbody {
+    tr:nth-child(even) {
+      background-color: @neutral-10;
+    }
+  }
+
   tr.@{components-prefix}-is-expanded {
-    background-color: @primary-10;
+    background-color: @primary-10 !important;
     position: relative;
+
+    & + tr {
+      background-color: transparent;
+    }
 
     td:first-child {
       position: relative;
@@ -104,17 +143,6 @@
         border-radius: 0px 8px 8px 0px;
         background-color: @primary-100;
       }
-    }
-  }
-
-  .@{components-prefix}-expanded-row {
-    td {
-      background-color: transparent;
-    }
-
-    table {
-      outline: 1px solid @neutral-40;
-      border-radius: 8px;
     }
   }
 }
