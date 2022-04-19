@@ -21,7 +21,7 @@
       </tr>
       <tr *ngIf="data.expand">
         <td colspan="4">
-          <bn-table bnHeight="344px">
+          <bn-table bnHeight="344px" (bnScrollEnd)="scrollEnd()">
             <thead>
               <tr>
                 <th>Cidade</th>

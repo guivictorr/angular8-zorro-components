@@ -22,4 +22,8 @@ export class AppComponent {
   sort(event: Event) {
     console.log(event);
   }
+
+  scrollEnd() {
+    console.log("scroll end");
+  }
 }
