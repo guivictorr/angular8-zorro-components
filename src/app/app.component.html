@@ -1,4 +1,4 @@
-<bn-table #tableComponent [bnData]="data">
+<bn-table #tableComponent [bnData]="data" [loading]="false">
   <thead (bnSortChange)="sort($event)">
     <tr>
       <th bnShowSort bnSortKey="name">Estado</th>

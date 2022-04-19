@@ -1,5 +1,6 @@
 import { Component, ElementRef, Input, Output } from "@angular/core";
 import { EventEmitter } from "@angular/core";
+import { InputBoolean } from "ng-zorro-antd";
 
 @Component({
   selector: "bn-table",
@@ -8,17 +9,18 @@ import { EventEmitter } from "@angular/core";
     `
       :host {
         display: block;
-        overflow-y: auto;
       }
     `,
   ],
   host: {
     "[style.height]": "bnHeight",
+    "[style.overflow]": "loading ? 'hidden' : 'auto'",
   },
 })
 export class BnTableComponent<T = any> {
   @Input() bnData?: T[];
   @Input() bnHeight?: string;
+  @Input() @InputBoolean() loading = false;
   @Output() bnScrollEnd = new EventEmitter();
   constructor(private elementRef: ElementRef<HTMLDivElement>) {}
 

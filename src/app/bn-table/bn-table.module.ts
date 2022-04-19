@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
-import { NzIconModule } from "ng-zorro-antd";
+import { NzSpinModule } from "ng-zorro-antd";
 
 import { BnTableComponent } from "./bn-table.component";
 import { BnTdComponent } from "./bn-td.component";
@@ -10,7 +10,7 @@ import { BnTheadComponent } from "./bn-thead.component";
 import { BnTrComponent } from "./bn-tr.component";
 
 @NgModule({
-  imports: [CommonModule, FormsModule, NzIconModule],
+  imports: [CommonModule, FormsModule, NzSpinModule],
   exports: [
     BnTableComponent,
     BnTdComponent,
