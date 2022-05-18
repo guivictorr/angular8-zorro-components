@@ -1,5 +1,5 @@
-<h1 align='center'>Angular Nested Table</h1>
-<p align='center'>I Created this repository just for develop a table component with extra options like nested tables and sorting using angular</p>
+<h1 align='center'>angular8-zorro-components</h1>
+<p align='center'>I Created this repository just for develop components using ng zorro component library</p>
 
 ## 🛠 Technologies
 
@@ -14,12 +14,13 @@ Frontend
 
 ```
 ## 1. Clone repo
-git clone https://github.com/guivictorr/angular8-nested-table.git
+git clone https://github.com/guivictorr/angular8-zorro-components.git
 
 ## 2. Change to project folder
-cd angular8-nested-table
+cd angular8-zorro-components
 
 ## 3. Install dependencies
+npm install
 
 ## 4. Run the app
 npm run start
