@@ -1,0 +1,57 @@
+nz-modal {
+  ::ng-deep .ant-modal-body {
+    padding: 0;
+  }
+}
+
+.title-wrapper {
+  display: flex;
+  align-items: center;
+
+  div[role="button"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .footer-buttons {
+    flex: 1;
+  }
+}
+
+button[bn-button] {
+  border: none;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 4px 16px;
+  background-color: transparent;
+}
+
+button[bn-type="primary"] {
+  background-color: #0858ce;
+  color: #fff;
+  transition: filter 0.2s ease-in-out;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+}
+
+button[bn-type="secondary"] {
+  color: #0858ce;
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #0857ce17;
+  }
+}

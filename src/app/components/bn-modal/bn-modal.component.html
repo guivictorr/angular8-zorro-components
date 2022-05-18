@@ -1,0 +1,67 @@
+<nz-modal
+  [(nzVisible)]="isVisible"
+  [nzTitle]="modalTitle"
+  [nzContent]="modalContent"
+  [nzFooter]="modalFooter"
+  (nzOnCancel)="handleCancel()"
+  [nzCloseIcon]="closeIcon"
+  [nzWidth]="bnWidth"
+>
+  <ng-template #closeIcon>
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M2.38388 0.616119C1.89572 0.12796 1.10428 0.12796 0.616119 0.616119C0.12796 1.10428 0.12796 1.89578 0.616119 2.38394L5.23224 7.00003L0.616119 11.6161C0.12796 12.1043 0.12796 12.8958 0.616119 13.3839C1.10428 13.8721 1.89572 13.8721 2.38388 13.3839L7 8.76785L11.6161 13.3839C12.1043 13.8721 12.8957 13.8721 13.3839 13.3839C13.872 12.8958 13.872 12.1043 13.3839 11.6161L8.76776 7.00003L13.3839 2.38394C13.872 1.89578 13.872 1.10428 13.3839 0.616119C12.8957 0.12796 12.1043 0.12796 11.6161 0.616119L7 5.23221L2.38388 0.616119Z"
+        fill="#0858CE"
+      />
+    </svg>
+  </ng-template>
+
+  <ng-template #modalTitle>
+    <div class="title-wrapper">
+      <div
+        role="button"
+        aria-label="Voltar"
+        *ngIf="!!backButton"
+        (click)="handleBack()"
+      >
+        <svg
+          width="16"
+          height="14"
+          viewBox="0 0 16 14"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1.11612 6.11612C0.627961 6.60427 0.627961 7.39573 1.11612 7.88388L6.11612 12.8839C6.60427 13.372 7.39573 13.372 7.88388 12.8839C8.37204 12.3957 8.37204 11.6043 7.88388 11.1161L5.01777 8.25L14 8.25C14.6904 8.25 15.25 7.69036 15.25 7C15.25 6.30965 14.6904 5.75 14 5.75L5.01777 5.75L7.88388 2.88388C8.37204 2.39573 8.37204 1.60427 7.88388 1.11612C7.39573 0.627962 6.60427 0.627962 6.11612 1.11612L1.11612 6.11612Z"
+            fill="#0858CE"
+          />
+        </svg>
+      </div>
+      {{ title }}
+    </div>
+  </ng-template>
+
+  <ng-template #modalContent>{{ bnContent }}</ng-template>
+
+  <ng-template #modalFooter>
+    <footer class="footer-wrapper">
+      <div class="footer-left-corner" *ngIf="!!extraButtons">
+        {{ extraButtons }}
+      </div>
+      <div class="footer-buttons">
+        <button bn-button bn-type="secondary" (click)="handleCancel()">
+          Cancelar
+        </button>
+        <button bn-button bn-type="primary" (click)="handleConfirm()">
+          {{ okButtonText }}
+        </button>
+      </div>
+    </footer>
+  </ng-template>
+</nz-modal>
