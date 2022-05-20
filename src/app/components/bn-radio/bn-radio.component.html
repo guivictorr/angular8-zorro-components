@@ -1,0 +1,18 @@
+<label [for]="bnKey">
+  <input
+    hidden
+    (change)="handleRadioChange($event)"
+    type="radio"
+    [name]="bnName"
+    [id]="bnKey"
+    class="bn-radio-input"
+  />
+  <div class="radio-container">
+    <div class="content-container">
+      <div class="indicator-container"></div>
+      <div>
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </div>
+</label>
